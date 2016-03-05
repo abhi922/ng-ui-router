@@ -44,14 +44,13 @@ module BusinessView.Controllers {
                 return this.pathToRendererMapping[parentUrl];
             }
             
-            var elements: Array<Object> = this.renderer;
-            
             if(parentUrl === '') {
-                this.pathToRendererMapping[parentUrl] = elements;
-                this.routerRegistration.registerStatesPrefix('', elements);
-                return elements;
+                this.pathToRendererMapping[parentUrl] = this.renderer;
+                this.routerRegistration.registerStatesPrefix('', this.renderer);
+                return this.renderer;
             }
             
+            var elements: Array<Object> = this.renderer;
             var pathParts: Array<string> = parentUrl.split('.');
             
             pathParts.forEach((part) => {
