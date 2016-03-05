@@ -46,7 +46,7 @@ module BusinessView.Controllers {
             
             if(parentUrl === '') {
                 this.pathToRendererMapping[parentUrl] = this.renderer;
-                this.routerRegistration.registerStatesPrefix('', this.renderer);
+                this.routerRegistration.registerStates('', this.renderer);
                 return this.renderer;
             }
             
@@ -62,7 +62,7 @@ module BusinessView.Controllers {
                 }
             });
             
-            this.routerRegistration.registerStatesPrefix(parentUrl + '.', elements);
+            this.routerRegistration.registerStates(parentUrl + '.', elements);
             
             this.pathToRendererMapping[parentUrl] = elements;
             

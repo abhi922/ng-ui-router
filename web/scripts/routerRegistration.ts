@@ -58,22 +58,7 @@ module BusinessView {
                 .otherwise('/overview');
         }
 
-        registerStates = () => {
-
-            var self = this;
-
-            self.renderer.forEach((tab) => {
-                self.states.forEach((item) => {
-                    if (tab.state === item.state) {
-                        RouterRegistration.$stateProviderRef
-                            .state(item.state, item.config);
-                    }
-                });
-            });
-
-        }
-
-        registerStatesPrefix = (prefix: string, renderer: Array<Object>) => {
+        registerStates = (prefix: string, renderer: Array<Object>) => {
             var self = this;
 
             renderer.forEach((tab) => {
