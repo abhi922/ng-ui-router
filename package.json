@@ -11,7 +11,8 @@
     "tsc": "^1.20150623.0"
   },
   "scripts": {
-      "compile": "./node_modules/tsc/bin/tsc @tsFiles.txt"
+      "compile": "./node_modules/tsc/bin/tsc @tsFiles.txt",
+      "start": "node app.js"
   },
   "devDependencies": {},
   "keywords": [
