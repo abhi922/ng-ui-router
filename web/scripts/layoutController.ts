@@ -4,6 +4,7 @@
 module BusinessView.Controllers {
 
     export class LayoutController {
+        
         renderer: Array<Object> = [
             {
                 state: 'overview',
@@ -27,16 +28,12 @@ module BusinessView.Controllers {
             }
         ];
 
-        rr: BusinessView.RouterRegistration;
+        routerRegistration: BusinessView.RouterRegistration;
         
         pathToRendererMapping: Object = {};
         
         constructor() {
-            this.rr = new BusinessView.RouterRegistration();
-        }
-
-        alert = () => {
-            alert('Hello world from controller');
+            this.routerRegistration = new BusinessView.RouterRegistration();
         }
         
         getRenderer = (parentUrl: string): Array<Object> => {
@@ -51,12 +48,11 @@ module BusinessView.Controllers {
             
             if(parentUrl === '') {
                 this.pathToRendererMapping[parentUrl] = elements;
-                this.rr.registerStatesPrefix('', elements);
+                this.routerRegistration.registerStatesPrefix('', elements);
                 return elements;
             }
             
             var pathParts: Array<string> = parentUrl.split('.');
-            var self = this;
             
             pathParts.forEach((part) => {
                 for (var i = 0; i < elements.length; i++) {
@@ -67,7 +63,7 @@ module BusinessView.Controllers {
                 }
             });
             
-            this.rr.registerStatesPrefix(parentUrl + '.', elements);
+            this.routerRegistration.registerStatesPrefix(parentUrl + '.', elements);
             
             this.pathToRendererMapping[parentUrl] = elements;
             
