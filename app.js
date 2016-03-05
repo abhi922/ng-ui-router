@@ -25,3 +25,5 @@ var server = http.createServer(function (req, res) {
 });
 
 server.listen(5555);
+
+console.log('Server now listening at port 5555');
