@@ -20,7 +20,7 @@ module BusinessView {
                 state: "overview",
                 config: {
                     url: '/overview',
-                    templateUrl: 'partial-home.html'
+                    templateUrl: 'partial-overview.html'
                 }
             },
             {
@@ -29,7 +29,7 @@ module BusinessView {
                     url: '/revenue',
                     views: {
                         '': {
-                            templateUrl: 'partial-about.html'
+                            templateUrl: 'partial-revenue.html'
                         }
                     }
                 }
@@ -38,7 +38,7 @@ module BusinessView {
                 state: "revenue.trend",
                 config: {
                     url: '/trend',
-                    templateUrl: 'partial-home-list.html',
+                    templateUrl: 'partial-revenue-list.html',
                     controller: function($scope) {
                         $scope.dogs = ['Bernese', 'Husky', 'Goldendoodle'];
                     }
@@ -48,7 +48,7 @@ module BusinessView {
                 state: "revenue.activity",
                 config: {
                     url: '/activity',
-                    template: "Hello this is a paragraph"
+                    template: "Hello this is an activity"
                 }
             }
         ];

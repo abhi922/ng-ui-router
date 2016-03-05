@@ -1,7 +1,7 @@
 <!-- partial-about.html -->
 
 <div class="jumbotron text-center">
-    <h1>The About Page</h1>
+    <h1>The Revenue Page</h1>
     <p>This page demonstrates <span class="text-danger">multiple</span> and <span class="text-danger">named</span> views.</p>
 
     <a ng-repeat="item in mainCtrl.getRenderer('revenue')" ui-sref="{{'.' + item.state}}" ng-class="item.class">{{item.label}}</a>

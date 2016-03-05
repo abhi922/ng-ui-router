@@ -15,12 +15,12 @@ module BusinessView.Controllers {
                 childStates: [
                     {
                         state: 'trend',
-                        label: 'List',
+                        label: 'Trend',
                         class: 'btn btn-primary'
                     },
                     {
                         state: 'activity',
-                        label: 'Paragraph',
+                        label: 'Activity',
                         class: 'btn btn-danger'
                     }
                 ]
