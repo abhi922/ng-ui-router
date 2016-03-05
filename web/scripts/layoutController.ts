@@ -21,7 +21,7 @@ module BusinessView.Controllers {
                     {
                         state: 'activity',
                         label: 'Activity',
-                        class: 'btn btn-danger'
+                        class: 'btn btn-success'
                     }
                 ]
             }
