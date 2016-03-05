@@ -1,0 +1,24 @@
+{
+  "name": "ng-ui-router",
+  "version": "1.0.0",
+  "description": "A small application to demonstrate dynamic configuration of states using angular's UI router",
+  "repository": {
+      "url": "https://github.com/abhi922/ng-ui-router",
+      "type": "github"
+  },
+  "main": "app.js",
+  "dependencies": {
+    "tsc": "^1.20150623.0"
+  },
+  "scripts": {
+      "compile": "./node_modules/tsc/bin/tsc @tsFiles.txt"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "angular-ui-router",
+    "dynamic",
+    "configuration"
+  ],
+  "author": "Abhishek Jain",
+  "license": "ISC"
+}

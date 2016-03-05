@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <style>
+        .navbar {
+            border-radius: 0;
+        }
+    </style>
+
+</head>
+
+<body ng-controller="LayoutController as mainCtrl">
+
+    <nav class="navbar navbar-inverse" role="navigation">
+        <div class="navbar-header">
+            <a class="navbar-brand" ui-sref="#">AngularUI Router</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li ng-repeat="item in mainCtrl.getRenderer()">
+                <a ui-sref="{{item.state}}">{{item.label}}</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div ui-view></div>
+    </div>
+
+    <script src="http://code.angularjs.org/1.2.13/angular.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+    <script src="scripts/routerRegistration.js"></script>
+    <script src="scripts/layoutController.js"></script>
+    <script>
+        angular.bootstrap(document, ["routerApp"]);
+    </script>
+</body>
+
+</html>
