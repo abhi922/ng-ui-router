@@ -1,2 +1,0 @@
-./web/scripts/routerRegistration.ts
-./web/scripts/layoutController.ts
