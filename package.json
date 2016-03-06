@@ -11,8 +11,10 @@
         "tsc": "^1.20150623.0"
     },
     "scripts": {
-        "compile": "find . | grep ^./web.*\\.ts$ > tsFiles.txt && tsc @tsFiles.txt && rm tsFiles.txt",
-        "start": "node app.js"
+        "precompile": "find . | grep ^./web.*\\\\.ts$ > tsFiles.txt",
+        "compile": "echo 'Compiling files: ' && cat tsFiles.txt && tsc @tsFiles.txt",
+        "start": "node app.js",
+        "postcompile": "rm tsFiles.txt"
     },
     "devDependencies": {
         "mocha": "^2.4.5"
