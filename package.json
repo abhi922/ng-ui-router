@@ -12,7 +12,7 @@
     },
     "scripts": {
         "precompile": "find . | grep ^./web.*\\\\.ts$ > tsFiles.txt",
-        "compile": "echo 'Compiling files: ' && cat tsFiles.txt && tsc @tsFiles.txt",
+        "compile": "echo 'Compiling files: ' && cat tsFiles.txt && tsc --outDir ./web/lib @tsFiles.txt",
         "start": "node app.js",
         "postcompile": "rm tsFiles.txt"
     },
